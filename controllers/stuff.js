@@ -33,7 +33,7 @@ exports.modifyEtat = (req,res)=>{
   House.updateOne({id:1} ,
      {
     temperature: req.body.temperature,
-    humidité : req.body.humidité, 
+    humidité : req.body.humidité
     })
   .then(()=>res.status(201).json({message:`l'etat est bien modifié`}))
   .catch(()=>res.status(404).json({mesa:err}))
