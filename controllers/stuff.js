@@ -30,17 +30,11 @@ exports.createHoueEtat = (req, res) => {
 
 
 exports.modifyEtat = (req,res)=>{
-  console.log(req.body)
   House.updateOne({id:1} ,
      {
     temperature: req.body.temperature,
     humidité : req.body.humidité, 
-    port1:req.body.port1,
-    port2:req.body.port2,
-    port3: req.body.port3,
-    climatiseur : req.body.climatiseur,
-    chauffage : req.body.chauffage,
-    lumiere : req.body.lumiere})
+    })
   .then(()=>res.status(201).json({message:`l'etat est bien modifié`}))
   .catch(()=>res.status(404).json({mesa:err}))
 }
