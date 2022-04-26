@@ -64,13 +64,3 @@ exports.modifyEtat = (req,res)=>{
   .catch(()=>res.status(404).json({mesa:err}))
 }
 
-exports.modifyEtatParams = (req,res)=>{
-  console.log(req.params)
-  // House.updateOne({id:1} ,
-  //    {
-  //   temperature: req.params.temp,
-  //   humidité : req.params.hum
-  //   })
-  // .then(()=>res.status(201).json({message:`l'etat est bien modifié`}))
-  // .catch(()=>res.status(404).json({mesa:err}))
-}
