@@ -3,6 +3,7 @@ const route = express.Router();
 const stuffControllers = require("../controllers/stuff.js"); 
 
 route.get("/",stuffControllers.get_Etat);
-route.put("/",stuffControllers.modifyEtat);
-route.post("/" , stuffControllers.createHoueEtat)
+route.patch("/",stuffControllers.modifyEtat);
+route.patch("/action" , stuffControllers.modifyEtatAction);
+route.post("/" , stuffControllers.createHoueEtat);
 module.exports = route;  
